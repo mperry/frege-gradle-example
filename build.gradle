@@ -12,6 +12,11 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'frege'
+apply plugin: "application"
+
+defaultTasks "build"
+
+mainClassName = "realworld.chapter1.Boolean"
 
 repositories {
     mavenLocal()
@@ -19,26 +24,17 @@ repositories {
 }
 
 dependencies {
-//    compile ""
     compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
 }
 
-//task greeting(type: org.gradle.GreetingTask) {
-    //greeting = 'howdy!'
-//}
-
-//compileFrege {
-//    compile {
-//        hints = true
-//        verbose = true
-//
-//    }
-//}true
 
 compileFrege << {
 
     verbose = true
     hints = true
+//    outputDir = file("build/classes/main")
 
 }
+
+classes.dependsOn "compileFrege"
 
