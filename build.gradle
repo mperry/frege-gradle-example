@@ -2,7 +2,10 @@
 
 buildscript {
     repositories {
-		mavenLocal()
+//		mavenLocal()
+        maven {
+            url = "https://oss.sonatype.org/content/groups/public"
+        }
         mavenCentral()
     }
     dependencies {
@@ -14,12 +17,19 @@ apply plugin: 'java'
 apply plugin: 'frege'
 apply plugin: "application"
 
+ext {
+	sonatypeUrl = "https://oss.sonatype.org/content/groups/public"
+}
+
 defaultTasks "build"
 
 mainClassName = "realworld.chapter1.Boolean"
 
 repositories {
-    mavenLocal()
+	maven {
+		url = sonatypeUrl
+	}
+//    mavenLocal()
     mavenCentral()
 }
 
