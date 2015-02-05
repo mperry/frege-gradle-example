@@ -1,1 +1,6 @@
-= frege-example
+
+= Frege Gradle Example Project
+
+This is an example project to demonstrate use of the Frege Gradle plugin, https://github.com/mperry/gradle-frege-plugin.  The project currently downloads the plugin from Sonatype and successfully compiles and runs the Boolean.fr file from chapter 1 of the Real World Frege project, https://github.com/Dierk/Real_World_Frege.
+
+
