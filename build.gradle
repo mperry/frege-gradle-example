@@ -1,0 +1,44 @@
+
+
+buildscript {
+    repositories {
+		mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+		classpath 'com.github.mperry.frege:gradle-frege-plugin:0.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'frege'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+//    compile ""
+    compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
+}
+
+//task greeting(type: org.gradle.GreetingTask) {
+    //greeting = 'howdy!'
+//}
+
+//compileFrege {
+//    compile {
+//        hints = true
+//        verbose = true
+//
+//    }
+//}true
+
+compileFrege << {
+
+    verbose = true
+    hints = true
+
+}
+
