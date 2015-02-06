@@ -10,6 +10,7 @@ buildscript {
     }
 }
 
+apply plugin: "java"
 apply plugin: "frege"
 apply plugin: "application"
 
@@ -41,4 +42,3 @@ frege {
     key1 = "value1"
 }
 
-classes.dependsOn("compileFrege")
