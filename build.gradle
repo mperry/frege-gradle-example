@@ -1,20 +1,16 @@
 
-
 buildscript {
     repositories {
-//		mavenLocal()
         maven {
             url = "https://oss.sonatype.org/content/groups/public"
         }
-        mavenCentral()
     }
     dependencies {
 		classpath 'com.github.mperry.frege:gradle-frege-plugin:0.1-SNAPSHOT'
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'frege'
+apply plugin: "frege"
 apply plugin: "application"
 
 ext {
@@ -29,22 +25,20 @@ repositories {
 	maven {
 		url = sonatypeUrl
 	}
-//    mavenLocal()
-    mavenCentral()
 }
 
 dependencies {
-    compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
+    compile "com.github.mperry.frege:gradle-frege-plugin:0.1-SNAPSHOT"
 }
 
-
-compileFrege << {
-
-    verbose = true
+compileFrege {
     hints = true
-//    outputDir = file("build/classes/main")
-
+    verbose = true
 }
 
-classes.dependsOn "compileFrege"
+// can configure value like this, not used at the moment
+frege {
+    key1 = "value1"
+}
 
+classes.dependsOn("compileFrege")
