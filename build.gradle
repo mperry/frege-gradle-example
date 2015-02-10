@@ -21,7 +21,8 @@ ext {
 
 defaultTasks "build"
 
-mainClassName = "realworld.chapter1.Boolean"
+//mainClassName = "realworld.chapter1.Boolean"
+mainClassName = "realworld.chapter1.Bridge"
 
 repositories {
 	maven {
@@ -33,10 +34,16 @@ repositories {
 dependencies {
 //    compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
     compile "com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT"
+    compile "org.functionaljava:functionaljava-java8:4.2"
 }
 
 compileFrege << {
     verbose = true
     hints = true
+    make = true
+    inline = false
 }
+
+
+tasks.compileFrege.dependsOn "compileJava"
 
