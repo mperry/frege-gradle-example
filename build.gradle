@@ -4,15 +4,14 @@ buildscript {
         maven {
             url = "https://oss.sonatype.org/content/groups/public"
         }
-        mavenCentral()
     }
     dependencies {
 		classpath 'com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT'
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'frege'
+apply plugin: "java"
+apply plugin: "frege"
 apply plugin: "application"
 
 ext {
@@ -37,13 +36,17 @@ dependencies {
     compile "org.functionaljava:functionaljava-java8:4.2"
 }
 
-compileFrege << {
+compileFrege {
     verbose = true
     hints = true
     make = true
     inline = false
 }
 
+// can configure value like this, not used at the moment
+frege {
+    key1 = "value1"
+}
 
 tasks.compileFrege.dependsOn "compileJava"
 
