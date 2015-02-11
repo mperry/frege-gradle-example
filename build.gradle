@@ -1,52 +1,50 @@
 
-buildscript {
-    repositories {
-        maven {
-            url = "https://oss.sonatype.org/content/groups/public"
-        }
-    }
-    dependencies {
-		classpath 'com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT'
-    }
-}
-
-apply plugin: "java"
-apply plugin: "frege"
-apply plugin: "application"
-
-ext {
-	sonatypeUrl = "https://oss.sonatype.org/content/groups/public"
-}
-
 defaultTasks "build"
 
-//mainClassName = "realworld.chapter1.Boolean"
-mainClassName = "realworld.chapter1.Bridge"
+allprojects {
 
-repositories {
-	maven {
-		url = sonatypeUrl
-	}
-    mavenCentral()
+
 }
 
-dependencies {
+subprojects {
+
+
+    buildscript {
+        repositories {
+            maven {
+                url = "https://oss.sonatype.org/content/groups/public"
+            }
+        }
+        dependencies {
+            classpath 'com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT'
+        }
+    }
+
+    apply plugin: "java"
+
+    apply plugin: "application"
+
+    ext {
+        sonatypeUrl = "https://oss.sonatype.org/content/groups/public"
+    }
+
+    defaultTasks "build"
+
+
+    repositories {
+        maven {
+            url = sonatypeUrl
+        }
+        mavenCentral()
+    }
+
+    dependencies {
 //    compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
-    compile "com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT"
-    compile "org.functionaljava:functionaljava-java8:4.2"
+        compile "com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT"
+        compile "org.functionaljava:functionaljava-java8:4.2"
+    }
+
+
+
+
 }
-
-compileFrege {
-    verbose = true
-    hints = true
-    make = true
-    inline = false
-}
-
-// can configure value like this, not used at the moment
-frege {
-    key1 = "value1"
-}
-
-tasks.compileFrege.dependsOn "compileJava"
-

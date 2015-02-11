@@ -1,0 +1,20 @@
+
+apply plugin: "frege"
+
+//mainClassName = "realworld.chapter1.Boolean"
+mainClassName = "realworld.chapter1.Bridge"
+
+tasks.compileFrege.dependsOn "compileJava"
+
+compileFrege {
+    verbose = true
+    hints = true
+    make = true
+    inline = false
+}
+
+// can configure value like this, not used at the moment
+frege {
+    key1 = "value1"
+}
+
