@@ -1,12 +1,18 @@
 
 = Frege Gradle Example Project
 
-This is an example project to demonstrate use of the Frege Gradle plugin, https://github.com/mperry/gradle-frege-plugin to compile Frege projects (https://github.com/Frege/frege).  The project currently downloads the plugin from Sonatype and successfully compiles and runs the Boolean.fr file from chapter 1 of the Real World Frege project, https://github.com/Dierk/Real_World_Frege.
+This is an example project to demonstrate use of the Frege Gradle plugin, https://github.com/mperry/gradle-frege-plugin to compile Frege projects (https://github.com/Frege/frege).  The project downloads the plugin from Sonatype.
+
+The project contains 3 Gradle submodules:
+
+* pure-frege - example from chapter 1 of the Real World Frege project, https://github.com/Dierk/Real_World_Frege, using Boolean.fr.
+* frege-java - Frege calling Java code from within same module, passing a third party library object as a parameter (in this case Functional Java's Unit type).
+* java-frege - Java code calling the Frege code from the frege-java submodule.
 
 Compile and run the example with:
 
-`gradle run`
+`./gradlew clean run`
 
-which compiles the source and runs the Boolean.fr file using the Gradle application plugin.
+which compiles the source and runs the main class from each of the 3 submodules using the Gradle application plugin.
 
 
