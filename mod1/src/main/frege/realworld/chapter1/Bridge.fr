@@ -9,6 +9,8 @@ data Bridge = pure native com.github.mperry.frege.Bridge where
     native fregeJava2 com.github.mperry.frege.Bridge.fregeJava2 :: () -> IO Unit
 
 
+java2Frege :: Int -> String
+java2Frege i = "Hi from Frege"
 
 main _ = do
     println("starting main...")

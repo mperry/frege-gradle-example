@@ -14,6 +14,8 @@ public class Facade {
     public static void main(String [] args) {
 
         System.out.println("Facade.main");
+        String s = realworld.chapter1.Bridge.java2Frege(3);
+        System.out.println("java2Frege: " + s);
     }
 
 }
