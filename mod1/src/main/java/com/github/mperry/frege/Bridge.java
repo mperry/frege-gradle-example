@@ -9,7 +9,6 @@ import static fj.Unit.unit;
  */
 public class Bridge {
 
-
     public static Unit fregeJava(Unit u) {
         System.out.println("in fregeJava");
         return unit();
@@ -20,9 +19,5 @@ public class Bridge {
         return unit();
     }
 
-    public static Unit javaFrege(Unit u) {
-        System.out.println("in javaFrege");
-        return unit();
-    }
 
 }

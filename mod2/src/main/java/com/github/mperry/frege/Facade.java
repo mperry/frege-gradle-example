@@ -1,6 +1,7 @@
 package com.github.mperry.frege;
 
 import fj.Unit;
+import com.github.mperry.frege.External;
 
 import static fj.Unit.unit;
 
@@ -14,7 +15,7 @@ public class Facade {
     public static void main(String [] args) {
 
         System.out.println("Facade.main");
-        String s = realworld.chapter1.Bridge.java2Frege(3);
+        String s = External.java2Frege(3);
         System.out.println("java2Frege: " + s);
     }
 
