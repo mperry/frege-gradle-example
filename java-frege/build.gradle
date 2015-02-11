@@ -2,7 +2,7 @@
 mainClassName = "com.github.mperry.frege.Facade"
 
 dependencies {
-    compile project(":mod1")
+    compile project(":frege-java")
 }
 
 

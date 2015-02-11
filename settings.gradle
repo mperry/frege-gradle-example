@@ -18,5 +18,5 @@ include 'services:webservice'
 
 rootProject.name = 'frege-example'
 
-include "mod1", "mod2", "mod3"
+include "frege-java", "java-frege", "pure-frege"
 
