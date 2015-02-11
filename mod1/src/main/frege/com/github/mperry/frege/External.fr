@@ -14,7 +14,7 @@ java2Frege i = "Hi from Frege"
 
 main _ = do
     println("starting main...")
-    u <- Bridge.fregeJava2 ()
-    u2 <- Bridge.fregeJava (Unit.unit ())
+    Bridge.fregeJava2 ()
+    Bridge.fregeJava $ Unit.unit ()
     println("main done")
 
