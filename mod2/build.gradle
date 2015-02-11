@@ -1,7 +1,4 @@
 
-//apply plugin: "frege"
-
-//mainClassName = "realworld.chapter1.Boolean"
 mainClassName = "com.github.mperry.frege.Facade"
 
 dependencies {
