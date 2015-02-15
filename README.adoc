@@ -1,7 +1,7 @@
 
 = Frege Gradle Example Project
 
-This is an example project to demonstrate use of the Frege Gradle plugin, https://github.com/mperry/gradle-frege-plugin to compile Frege projects (https://github.com/Frege/frege).  The project downloads the plugin from Sonatype.
+This is an example project to demonstrate use of the Frege Gradle plugin, https://github.com/Frege/frege-gradle-plugin to compile Frege projects (https://github.com/Frege/frege).  The project downloads the plugin from Sonatype.
 
 The project contains 3 Gradle submodules:
 
