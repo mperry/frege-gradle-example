@@ -18,7 +18,7 @@ buildscript {        // make the frege plugin available in our build
 
 subprojects { // now the common settings for our subprojects
     apply plugin: "java"
-	apply plugin: "frege"
+    apply plugin: "frege"
     apply plugin: "application"
 
     ext {
@@ -26,7 +26,7 @@ subprojects { // now the common settings for our subprojects
     }
 
     repositories {
-		mavenLocal()
+        mavenLocal()
         maven {
             url = sonatypeUrl
         }
@@ -34,10 +34,10 @@ subprojects { // now the common settings for our subprojects
     }
 
     dependencies {
-		// the frege distribution itself does not come with the plugin
-		// you can use the one you want - unless the compiler changed much
+        // the frege distribution itself does not come with the plugin
+        // you can use the one you want - unless the compiler changed much
         compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
-		// some other arbitrary dependency - just for testing that it works
+        // some other arbitrary dependency - just for testing that it works
         compile "org.functionaljava:functionaljava-java8:4.2"
     }
 
