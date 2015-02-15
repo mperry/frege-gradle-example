@@ -1,6 +1,4 @@
 
-apply plugin: "frege"
-
 mainClassName = "com.github.mperry.frege.External"
 
 tasks.compileFrege.dependsOn "compileJava"

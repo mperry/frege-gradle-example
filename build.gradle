@@ -1,37 +1,32 @@
-
-defaultTasks "build"
-
 allprojects {
-
-
+	defaultTasks "build"
 }
 
-subprojects {
 
-
-    buildscript {
-        repositories {
-            maven {
-                url = "https://oss.sonatype.org/content/groups/public"
-            }
-        }
-        dependencies {
-            classpath 'com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT'
+buildscript {        // make the frege plugin available in our build
+    repositories {
+		mavenLocal() // if you have the plugin installed locally, this is enough
+        maven {
+            url = "https://oss.sonatype.org/content/groups/public"
         }
     }
+    dependencies {
+        classpath 'com.github.mperry.frege:frege-gradle-plugin:0.2-SNAPSHOT'
+    }
+}
 
+
+subprojects { // now the common settings for our subprojects
     apply plugin: "java"
-
+    apply plugin: "frege"
     apply plugin: "application"
 
     ext {
         sonatypeUrl = "https://oss.sonatype.org/content/groups/public"
     }
 
-    defaultTasks "build"
-
-
     repositories {
+        mavenLocal()
         maven {
             url = sonatypeUrl
         }
@@ -39,12 +34,11 @@ subprojects {
     }
 
     dependencies {
-//    compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
-        compile "com.github.mperry.frege:gradle-frege-plugin:0.2-SNAPSHOT"
+        // the frege distribution itself does not come with the plugin
+        // you can use the one you want - unless the compiler changed much
+        compile "com.theoryinpractise.frege:frege:3.22.324-g630677b"
+        // some other arbitrary dependency - just for testing that it works
         compile "org.functionaljava:functionaljava-java8:4.2"
     }
-
-
-
 
 }
