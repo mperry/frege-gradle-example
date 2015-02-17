@@ -11,7 +11,7 @@ buildscript {        // make the frege plugin available in our build
         }
     }
     dependencies {
-        classpath 'com.github.mperry.frege:frege-gradle-plugin:0.2-SNAPSHOT'
+        classpath 'org.frege-lang:frege-gradle-plugin:0.1-SNAPSHOT'
     }
 }
 
