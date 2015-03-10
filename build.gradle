@@ -2,9 +2,6 @@ allprojects {
 	defaultTasks "build"
 }
 
-// Workaround to build proper jars on Windows, see https://github.com/Frege/frege-gradle-plugin/issues/9
-System.setProperty("file.encoding", "UTF-8")
-
 buildscript {        // make the frege plugin available in our build
     repositories {
 		mavenLocal() // if you have the plugin installed locally, this is enough
