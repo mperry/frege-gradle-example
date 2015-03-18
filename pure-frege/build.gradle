@@ -6,3 +6,8 @@ fregeNativeGen {
     clazz = "java.util.HashSet"
 }
 
+fregeDoc {
+    verbose = true
+//    module = 'realworld.chapter1.Boolean' // default is all production modules
+}
+

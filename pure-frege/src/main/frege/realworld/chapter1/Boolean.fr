@@ -1,6 +1,14 @@
+--- this module is documented
+{-- second paragraph of module doc -}
+{--
+    third paragraph of module doc
 
+    4th paragraph of module doc
+    *bold*  _italic_ @monospaced@ 'HelloFrege'
+-}
 module realworld.chapter1.Boolean where
 
+--- documentation for main function
 main _ = do
     println ( true ) -- haskell: True
     println ( true  && false )
