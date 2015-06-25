@@ -1,0 +1,7 @@
+module HelloTest where
+
+import Test.QuickCheck -- tests may appear in extra files as well
+
+import HelloFrege
+
+testLength = once (length greeting == 11)

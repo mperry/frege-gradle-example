@@ -1,0 +1,13 @@
+--- Documentation for HelloFrege
+module HelloFrege where
+
+--- Documentation for greeting
+greeting = "Hello Frege"
+
+import Test.QuickCheck -- tests may appear inline
+
+---
+testLength = once (length greeting == 11)
+
+main _ = do
+    println greeting
