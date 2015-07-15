@@ -3,7 +3,7 @@ mainClassName = "realworld.chapter1.Boolean"
 
 
 fregeNativeGen {
-    clazz = "java.util.HashSet"
+    className = "java.util.HashSet"
 }
 
 fregeDoc {
