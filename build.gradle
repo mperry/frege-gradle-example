@@ -12,7 +12,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'org.frege-lang:frege-gradle-plugin:0.4-SNAPSHOT'
+        classpath 'org.frege-lang:frege-gradle-plugin:0.4'
     }
 }
 
@@ -36,9 +36,9 @@ subprojects { // now the common settings for our subprojects
     dependencies {
         // the frege distribution itself does not come with the plugin
         // you can use the one you want - unless the compiler changed much
-        compile "org.frege-lang:frege-gradle-plugin:0.4-SNAPSHOT"
+        compile "org.frege-lang:frege-gradle-plugin:0.4"
         // some other arbitrary dependency - just for testing that it works
-        compile "org.functionaljava:functionaljava-java8:4.3"
+        compile "org.functionaljava:functionaljava:4.4"
     }
 
 }
