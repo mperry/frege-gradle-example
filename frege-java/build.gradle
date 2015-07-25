@@ -15,3 +15,7 @@ frege {
     key1 = "value1"
 }
 
+
+fregeDoc {
+    verbose = true
+}
