@@ -5,9 +5,15 @@ tasks.compileFrege.dependsOn "compileJava"
 
 compileFrege {
     verbose = true
-    hints = true
-    make = true
-    inline = false
+//    help = true
+//    help = true
+//    hints = true
+//    make = true
+//    inline = false
+}
+
+compileTestFrege {
+//    help = true
 }
 
 // can configure value like this, not used at the moment
@@ -18,4 +24,5 @@ frege {
 
 fregeDoc {
     verbose = true
+
 }

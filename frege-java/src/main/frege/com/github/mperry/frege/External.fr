@@ -4,9 +4,14 @@ module com.github.mperry.frege.External where
 data Unit = pure native fj.Unit where
     pure native unit fj.Unit.unit :: () -> Unit
 
+--deriving Eq
+--derive Eq Unit
+--derive Eq Unit
+
 data Bridge = pure native com.github.mperry.frege.Bridge where
     native fregeJava com.github.mperry.frege.Bridge.fregeJava :: Unit -> IO Unit
     native fregeJava2 com.github.mperry.frege.Bridge.fregeJava2 :: () -> IO Unit
+    pure native fregeJava3 com.github.mperry.frege.Bridge.fregeJava3 :: () -> String
 
 
 java2Frege :: Int -> String
@@ -18,3 +23,9 @@ main _ = do
     Bridge.fregeJava $ Unit.unit ()
     println("main done")
 
+main2 :: () -> IO()
+main2 u = do
+     println("starting main...")
+     Bridge.fregeJava2 ()
+     Bridge.fregeJava $ Unit.unit ()
+     println("main done")

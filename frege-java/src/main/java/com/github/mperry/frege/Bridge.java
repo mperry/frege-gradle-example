@@ -19,5 +19,9 @@ public class Bridge {
         return unit();
     }
 
+    public static String fregeJava3() {
+        return "fregeJava3";
+    }
+
 
 }

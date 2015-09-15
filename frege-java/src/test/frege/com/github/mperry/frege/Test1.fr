@@ -1,0 +1,15 @@
+
+module com.github.mperry.frege.Test1 where
+
+-- import frege.test.Quickcheck
+import Test.QuickCheck
+
+import com.github.mperry.frege.External
+-- import HelloFrege
+
+--method1 = property(Unit.unit () == Unit.unit ())
+
+method2 = property(1 == 2)
+
+
+method3 = property(Bridge.fregeJava3 () == Bridge.fregeJava3 ())

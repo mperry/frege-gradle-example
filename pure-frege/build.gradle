@@ -11,3 +11,17 @@ fregeDoc {
 //    module = 'realworld.chapter1.Boolean' // default is all production modules
 }
 
+
+fregeQuickCheck {
+    help = false
+//    listAvailable = true
+    verbose = true
+    classpathDirectories =
+            ["$project.buildDir/classes/main/"]
+//    ["$project.buildDir/classes/main/", "$project.buildDir/classes/test/"]
+}
+
+compileTestFrege {
+
+    verbose = true
+}
