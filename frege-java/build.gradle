@@ -26,3 +26,8 @@ fregeDoc {
     verbose = true
 
 }
+
+fregeQuickCheck {
+//    help = true
+//    listAvailable = true
+}

@@ -9,7 +9,7 @@ import com.github.mperry.frege.External
 
 --method1 = property(Unit.unit () == Unit.unit ())
 
-method2 = property(1 == 2)
+method2 = property(1 == 1)
 
 
 method3 = property(Bridge.fregeJava3 () == Bridge.fregeJava3 ())
