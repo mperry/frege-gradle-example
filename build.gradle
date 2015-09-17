@@ -37,6 +37,7 @@ subprojects {
         // the frege distribution itself does not come with the plugin
         // you can use the one you want - unless the compiler changed much
         compile "org.frege-lang:frege:3.22.367-g2737683"
+        compile "org.frege-lang:frege-native-gen:1.3"
 
         // some other arbitrary dependency - just for testing that it works
         compile "org.functionaljava:functionaljava:4.4"

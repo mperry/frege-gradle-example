@@ -1,16 +1,15 @@
 
 mainClassName = "realworld.chapter1.Boolean"
 
-
 fregeNativeGen {
     className = "java.util.HashSet"
+//    help = true
 }
 
 fregeDoc {
     verbose = true
 //    module = 'realworld.chapter1.Boolean' // default is all production modules
 }
-
 
 fregeQuickCheck {
     help = false
@@ -22,6 +21,6 @@ fregeQuickCheck {
 }
 
 compileTestFrege {
-
     verbose = true
 }
+
