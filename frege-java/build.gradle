@@ -24,6 +24,7 @@ frege {
 
 fregeDoc {
     verbose = true
+//    help = true
 
 }
 

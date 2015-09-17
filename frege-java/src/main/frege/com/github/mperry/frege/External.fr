@@ -1,12 +1,15 @@
 
+--- this package is documented
+{-- second paragraph of package doc -}
+{--
+    third paragraph of package doc
+
+    4th paragraph of package doc
+-}
 module com.github.mperry.frege.External where
 
 data Unit = pure native fj.Unit where
     pure native unit fj.Unit.unit :: () -> Unit
-
---deriving Eq
---derive Eq Unit
---derive Eq Unit
 
 data Bridge = pure native com.github.mperry.frege.Bridge where
     native fregeJava com.github.mperry.frege.Bridge.fregeJava :: Unit -> IO Unit
