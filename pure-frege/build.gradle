@@ -12,12 +12,12 @@ fregeDoc {
 }
 
 
-fregeQuickCheck {
-    help = false
+quickCheck {
+//    help = false
 //    listAvailable = true
-    verbose = true
-    classpathDirectories =
-            ["$project.buildDir/classes/main/"]
+//    verbose = true
+//    classpathDirectories =
+//            ["$project.buildDir/classes/main/"]
 //    ["$project.buildDir/classes/main/", "$project.buildDir/classes/test/"]
 }
 
