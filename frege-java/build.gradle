@@ -5,6 +5,9 @@ tasks.compileFrege.dependsOn "compileJava"
 
 compileFrege {
     verbose = true
+//    module = ""
+    module = "$projectDir/src/main/frege"
+
 //    help = true
 //    help = true
 //    hints = true
