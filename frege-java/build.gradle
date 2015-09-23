@@ -6,7 +6,7 @@ tasks.compileFrege.dependsOn "compileJava"
 compileFrege {
     verbose = true
 //    module = ""
-    module = "$projectDir/src/main/frege"
+//    module = "$projectDir/src/main/frege"
 
 //    help = true
 //    help = true
@@ -17,6 +17,7 @@ compileFrege {
 
 compileTestFrege {
 //    help = true
+//    module = "$projectDir/src/test/frege"
 }
 
 // can configure value like this, not used at the moment
