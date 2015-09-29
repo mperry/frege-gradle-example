@@ -5,19 +5,9 @@ tasks.compileFrege.dependsOn "compileJava"
 
 compileFrege {
     verbose = true
-//    module = ""
-//    module = "$projectDir/src/main/frege"
-
-//    help = true
-//    help = true
-//    hints = true
-//    make = true
-//    inline = false
 }
 
 compileTestFrege {
-//    help = true
-//    module = "$projectDir/src/test/frege"
 }
 
 // can configure value like this, not used at the moment
@@ -25,10 +15,8 @@ frege {
     key1 = "value1"
 }
 
-
 fregeDoc {
     verbose = true
-//    help = true
 
 }
 
