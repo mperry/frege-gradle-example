@@ -5,18 +5,3 @@ fregeNativeGen {
     className = "java.util.HashSet"
 }
 
-fregeDoc {
-    verbose = true
-}
-
-fregeQuickCheck {
-    help = false
-//    listAvailable = true
-    verbose = true
-    classpathDirectories = ["$project.buildDir/classes/main/"]
-}
-
-compileTestFrege {
-    verbose = true
-}
-
