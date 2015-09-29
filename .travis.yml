@@ -5,3 +5,5 @@ sudo: false
 jdk:
   - oraclejdk7
 
+script:
+  - ./gradlew -i test fregeDoc :pure-frege:fregeNativeGen run
