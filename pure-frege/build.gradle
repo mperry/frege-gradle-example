@@ -1,5 +1,12 @@
 
+apply plugin: "org.frege-lang"
+
 mainClassName = "realworld.chapter1.Boolean"
+
+dependencies {
+    compile dep.frege
+    compile dep.nativeGen
+}
 
 fregeNativeGen {
     className = "java.util.HashSet"

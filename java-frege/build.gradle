@@ -5,10 +5,3 @@ dependencies {
     compile project(":frege-java")
 }
 
-compileFrege {
-    enabled = false
-}
-
-compileTestFrege {
-    enabled = false
-}

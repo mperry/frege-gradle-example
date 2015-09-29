@@ -1,28 +1,13 @@
 
+apply plugin: "org.frege-lang"
+
 mainClassName = "com.github.mperry.frege.External"
 
-tasks.compileFrege.dependsOn "compileJava"
-
-compileFrege {
-    verbose = true
-}
-
-compileTestFrege {
-}
-
-// can configure value like this, not used at the moment
-frege {
-    key1 = "value1"
+dependencies {
+    compile dep.frege
+    compile dep.fj
 }
 
 fregeDoc {
-    verbose = true
-
+    module = "com.github.mperry.frege.External"
 }
-
-fregeQuickCheck {
-    verbose = true
-//    help = true
-//    listAvailable = true
-}
-
